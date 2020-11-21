@@ -22,29 +22,4 @@ public class UserRegisterTest extends BaseTest {
         registerPageBL.verifyUserRegistration();
     }
 
-
-    @Test
-    public void loginUserWithValidParameters() {
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        BasePage basePage = new BasePage();
-        MainPageBL mainPageBL = new MainPageBL();
-        LoginPageBL loginPageBL = mainPageBL.getHeaderPageBL()
-                .clickOnMyAccountButton()
-                .clickOnLoginButton()
-                .loginPerson();
-        loginPageBL.verifyUserLogin();
-    }
-
-
-
-    @Test
-    public void SearchUserWithValidParameters() {
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
-        SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
-                .clickOnSearchButton()
-                .SearchProduct();
-//       searchPageBL.verifyUserSearch();
-    }
-
 }

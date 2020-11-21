@@ -44,15 +44,7 @@ public class LoginPageBL {
     }
 
     public void verifyUserLogin() {
-        String expectedMessage = "My Account";
+        String expectedMessage = "Newsletter";
         Assert.assertEquals(successLoginPage.getSuccessTitle().getText(), expectedMessage, "Incorrect page title");
     }
 }
-
-
-
-
-
-
-
-

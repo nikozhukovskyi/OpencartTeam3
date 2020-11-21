@@ -6,7 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class SuccessLoginPage extends BasePage {
 
-    @FindBy(xpath = ".//*[@id='content']/h2")
+    @FindBy(xpath = "//*[@id='content']/h2[4]")
+
     private WebElement successTitle;
 
     public WebElement getSuccessTitle() {

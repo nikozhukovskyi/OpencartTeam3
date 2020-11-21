@@ -9,8 +9,8 @@ public class LoginModelRepository {
 
     public static LoginModel getLoginModel() {
         return LoginModel.builder()
-                .email("qwe@gmail.com")
-                .password("buybeka123")
+                .email("asd@gmail.com")
+                .password("123456")
                 .build();
     }
 }

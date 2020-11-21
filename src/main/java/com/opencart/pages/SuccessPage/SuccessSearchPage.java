@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SuccessSearchPage extends BasePage {
 
-    @FindBy(className = "")
+    @FindBy(xpath = ".//div[@class='caption']/h4/a[text()='MacBook Pro']")
     private WebElement successTitle;
 
     public WebElement getSuccessTitle() {

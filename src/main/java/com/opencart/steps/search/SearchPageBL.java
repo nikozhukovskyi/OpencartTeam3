@@ -22,8 +22,9 @@ public class SearchPageBL {
     public SearchPageBL SearchProduct() {
         SearchModel searchModel = SearchModelRepository.getSearchModel();
         inputSearch(searchModel.getSearch());
-        clickSearchButton();
         clickOnDescriptionBox();
+        clickSearchButton();
+
 
         successSearchPage = new SuccessSearchPage();
         return this;
@@ -45,7 +46,7 @@ public class SearchPageBL {
     }
 
     public void verifyUserSearch() {
-        String expectedMessage = "Apple Cinema 30";
+        String expectedMessage = "MacBook Pro";
         Assert.assertEquals(successSearchPage.getSuccessTitle().getText(), expectedMessage, "Incorrect page title");
     }
 

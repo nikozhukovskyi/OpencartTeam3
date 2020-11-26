@@ -26,7 +26,7 @@ public class LoginPageBL {
         successLoginPage = new SuccessLoginPage();
         return this;
     }
-
+    
     private void inputEmail(String email) {
         loginPage.getEmailInput().clear();
         loginPage.getEmailInput().sendKeys(email);

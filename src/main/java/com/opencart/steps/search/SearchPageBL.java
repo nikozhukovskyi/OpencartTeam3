@@ -22,7 +22,7 @@ public class SearchPageBL {
     public SearchPageBL SearchProduct() {
         SearchModel searchModel = SearchModelRepository.getSearchModel();
         inputSearch(searchModel.getSearch());
-        clickOnDescriptionBox();
+        clickOnDescriptionBox(1);
         clickSearchButton();
 
 
@@ -36,8 +36,8 @@ public class SearchPageBL {
         searchPage.getSearchInput().sendKeys(search);
     }
 
-    private void clickOnDescriptionBox(){
-        new DriverUtils().clickOnElementJS(searchPage.getDescription());
+    private void clickOnDescriptionBox(int value){
+        new DriverUtils().clickOnElementJS(searchPage.clickProductDescription(value));
     }
 
 

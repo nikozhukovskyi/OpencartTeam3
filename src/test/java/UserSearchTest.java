@@ -1,5 +1,4 @@
 import com.opencart.navigation.Navigation;
-import com.opencart.pages.BasePage;
 import com.opencart.steps.MainPageBL;
 import com.opencart.steps.search.SearchPageBL;
 import org.testng.annotations.Test;

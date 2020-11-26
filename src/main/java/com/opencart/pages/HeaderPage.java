@@ -1,6 +1,5 @@
 package com.opencart.pages;
 
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,10 +13,10 @@ public class HeaderPage extends BasePage {
 
     @FindBy(xpath = ".//*[contains(@href,'login')]")
     private WebElement loginButton;
-
+    
     @FindBy(xpath = "//*[@id='search']/span/button")
     private WebElement searchButton;
-
+    
     @FindBy(xpath = "//div[@class ='product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12'][2]//button[1]")
     private WebElement addToCartButton;
 

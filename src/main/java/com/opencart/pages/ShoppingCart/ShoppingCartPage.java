@@ -142,5 +142,4 @@ public class ShoppingCartPage extends BasePage {
     public WebElement getConfirmButtonStep6() {
         return confirmButtonStep6;
     }
-
 }

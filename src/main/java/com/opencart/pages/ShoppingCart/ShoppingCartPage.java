@@ -1,10 +1,11 @@
 package com.opencart.pages.ShoppingCart;
 
+import com.gargoylesoftware.htmlunit.AlertHandler;
 import com.opencart.pages.BasePage;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
 public class ShoppingCartPage extends BasePage {
 
@@ -63,9 +64,16 @@ public class ShoppingCartPage extends BasePage {
     @FindBy(xpath = "//*[@class='pull-right']/a[@href]")
     private WebElement continueFinish;
 
-    public WebElement getContinueFinish() {
-        return continueFinish;
-    }
+    @FindBy(xpath = "//div[@class ='pull-right']/a[@href]")
+    private WebElement checkoutButton;
+
+//    public WebElement getacc(){
+//        return driver.findElement(By.xpath(".//*[@id='button-payment-method']"));
+//    }
+//    public void getas(){
+//        Alert alert = driver.switchTo().alert();
+//        alert.accept();
+//    }
 
     public WebElement getSubscribeRadioButtonGuestCheckout(String value) {
         return driver.findElement(By.xpath("//div[@class = 'radio'][2]//input[@value='" + value + "']"));
@@ -142,5 +150,9 @@ public class ShoppingCartPage extends BasePage {
     public WebElement getConfirmButtonStep6() {
         return confirmButtonStep6;
     }
+//
+//    public WebElement getAcceptAlert(){
+//        return ;
+//    }
 
 }

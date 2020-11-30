@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" verbose="3">
+    <test name="Test Suite of test">
+        <packages>
+            <package name="com.opencart.test.*"/>
+        </packages>
+    </test>
+</suite>

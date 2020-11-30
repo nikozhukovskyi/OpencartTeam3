@@ -6,8 +6,15 @@ import com.opencart.pages.SuccessPage.SuccessShoppingCartPage;
 import com.opencart.repository.shoppingCart.ShoppingCartModelRepository;
 import com.opencart.util.DriverUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.sql.Driver;
 
 
 public class ShoppingCartPageBL {
@@ -41,14 +48,20 @@ public class ShoppingCartPageBL {
         clickOnContinueButtonStep4();                               //Step 4
         clickPolicyCheckbox();
         clickOnContinueButtonStep5();                               //Step 5
+//        acc();
         clickOnContinueButtonStep6();                               //Step 6 Confirm
+
         Thread.sleep(1000);
 
-       // successShoppingCartPage = new SuccessShoppingCartPage();
-       // clickFinishButtion();
+//        successShoppingCartPage = new SuccessShoppingCartPage();
         return this;
     }
 
+//    private void acc(){
+//        shoppingCartPage.getacc().click();
+//        shoppingCartPage.getas();
+//
+//    }
 
     private void inputFirstName(String firstName) {
         shoppingCartPage.getInputPaymentFirstname().clear();
@@ -135,13 +148,9 @@ public class ShoppingCartPageBL {
     private void clickOnContinueButtonStep6() {
         shoppingCartPage.getConfirmButtonStep6().click();
     }
-/**
-    private void clickFinishButtion(){
-        shoppingCartPage.getContinueFinish().click();
-    }
+
     public void verifyUserBuy() {
         String expectedMessage = "Your order has been successfully processed!";
         Assert.assertEquals(successShoppingCartPage.getSuccessTitle().getText(), expectedMessage, "Incorrect page title");
     }
-*/
 }

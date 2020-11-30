@@ -21,10 +21,10 @@ public class HeaderPage extends BasePage {
     @FindBy(xpath = "//div[@class ='product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12'][2]//button[1]")
     private WebElement addToCartButton;
 
-    @FindBy(xpath = "//*[@id='top-links']/ul/li[4]/a")
+    @FindBy(xpath = ".//*[@class='btn btn-inverse btn-block btn-lg dropdown-toggle']")
     private WebElement shoppingCart;
 
-    @FindBy(xpath = "//div[@class ='pull-right']/a[@href]")
+    @FindBy(xpath = ".//*[@class='dropdown-menu pull-right']//p/a[@href][2]")
     private WebElement checkoutButton;
 
     public WebElement getMyAccountButton() {

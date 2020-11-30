@@ -1,3 +1,5 @@
+package com.opencart.test;
+
 import com.opencart.navigation.Navigation;
 import com.opencart.steps.login.LoginPageBL;
 import com.opencart.steps.MainPageBL;

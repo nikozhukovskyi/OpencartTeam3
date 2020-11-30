@@ -1,3 +1,5 @@
+package com.opencart.test;
+
 import com.opencart.navigation.Navigation;
 import com.opencart.steps.MainPageBL;
 import com.opencart.steps.ShoppingCart.ShoppingCartPageBL;
@@ -12,8 +14,9 @@ public class UserShoppingCartTest extends BaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         ShoppingCartPageBL shoppingCartPageBL = mainPageBL.getHeaderPageBL()
+
                 .clickAddToCart()
                 .ShoppingNewOrder();
-        //shoppingCartPageBL.verifyUserBuy();
+       // shoppingCartPageBL.verifyUserBuy();
     }
 }

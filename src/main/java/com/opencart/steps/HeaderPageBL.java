@@ -5,6 +5,7 @@ import com.opencart.steps.ShoppingCart.ShoppingCartPageBL;
 import com.opencart.steps.login.LoginPageBL;
 import com.opencart.steps.register.RegisterPageBL;
 import com.opencart.steps.search.SearchPageBL;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HeaderPageBL {
 
@@ -16,11 +17,11 @@ public class HeaderPageBL {
 
     public ShoppingCartPageBL clickAddToCart() throws InterruptedException {
         headerPage.getAddToCartButton().click();
-        Thread.sleep(1000);
-        headerPage.getShoppingCart().click();
-        Thread.sleep(1000);
-        headerPage.getCheckoutButton().click();
         Thread.sleep(2000);
+        headerPage.getShoppingCart().click();
+//        Thread.sleep(2000);
+        headerPage.getCheckoutButton().click();
+//        Thread.sleep(1000);
         return new ShoppingCartPageBL();
     }
 
